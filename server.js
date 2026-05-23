@@ -8,7 +8,7 @@ dotenv.config();
 
 const fastify = Fastify({ logger: false });
 const PORT = 5000;
-const DOMAIN = process.env.NGROK_URL;
+const DOMAIN = process.env.RENDER_URL || process.env.NGROK_URL;
 const WS_URL = `wss://${DOMAIN}/ws`;
 
 const WELCOME = "Gracias por llamar a Servicios Consulares KPC. Soy Sofía, en qué le puedo ayudar hoy.";
