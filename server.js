@@ -5,7 +5,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import sgMail from "@sendgrid/mail";
 
 const fastify = Fastify({ logger: false });
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const DOMAIN = process.env.RENDER_URL || process.env.NGROK_URL;
 const WS_URL = `wss://${DOMAIN}/ws`;
 
