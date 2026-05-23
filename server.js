@@ -6,7 +6,7 @@ import sgMail from "@sendgrid/mail";
 
 const fastify = Fastify({ logger: false });
 const PORT = process.env.PORT || 5000;
-const DOMAIN = process.env.RENDER_URL || process.env.NGROK_URL;
+const DOMAIN = process.env.RAILWAY_PUBLIC_DOMAIN || process.env.RENDER_URL || process.env.NGROK_URL;
 const WS_URL = `wss://${DOMAIN}/ws`;
 
 const WELCOME = "Gracias por llamar a Servicios Consulares KPC. Soy Sofía, en qué le puedo ayudar hoy.";
