@@ -3,8 +3,6 @@ import fastifyWs from "@fastify/websocket";
 import fastifyFormBody from "@fastify/formbody";
 import Anthropic from "@anthropic-ai/sdk";
 import sgMail from "@sendgrid/mail";
-import dotenv from "dotenv";
-dotenv.config();
 
 const fastify = Fastify({ logger: false });
 const PORT = 5000;
